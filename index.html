@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" a href="stylesheet.css">
+    <title>Experis Academy</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+          $(document).on('scroll',function(){
+             if ($(document).scrollTop() > 243) {
+                 $('header nav').addClass('fixed')
+             } else {
+                 $('header nav').removeClass('fixed')
+             }
+
+          });
+
+    </script>
+
+</head>
+<body>
+
+<header>
+    <h1> W4 </h1>
+    <h2> Group Task 1 - For Tuesday </h2>
+</header>
+<div class="br2"></div>
+<hr>
+
+<article>
+    <h3> Working with Maven </h2>
+    <pre> 
+As a group, build a simple Maven project using the command line and text editors only.
+Then deploy the application to Heroku.
+
+The application should host an image of each group member accompanied by their name.
+
+<a href="https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin">devcenter.heroku.com</a>
+
+Submit only a working link to the live website.
+
+The purpose of this tasks is for the groups to work together solving a problem that we have not covered in class.
+    </pre>
+
+
+</article>
+
+<hr>
+
+<div class="br2"></div>
+<div class="rows" name="rows">
+    <div class="row">
+        <div class="column"><img src="Arne.jpg" alt="Arne Wiklund"></div>
+        <div class="column"><img src="Amund.jpg" alt="Amund Froknestad"></div>
+        <div class="column"><img src="Tage.jpg" alt="Tage Lessum"></div>
+        <div class="column"><img src="Bianca.jpg" alt="Bianca Eilertsen"></div>
+    </div>
+    <div class="rad">
+        <div class="columnrad"> Arne Wiklund </div>
+        <div class="columnrad"> Amund Froknestad</div>
+        <div class="columnrad"> Tage Lessum</div>
+        <div class="columnrad"> Bianca Eilertsen</div>
+    </div>
+</div>
+
+<div class="br"></div>
+</body>
+
+
+</html>
