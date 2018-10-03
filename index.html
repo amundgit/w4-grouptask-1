@@ -1,70 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" a href="stylesheet.css">
-    <title>Experis Academy</title>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script>
-          $(document).on('scroll',function(){
-             if ($(document).scrollTop() > 243) {
-                 $('header nav').addClass('fixed')
-             } else {
-                 $('header nav').removeClass('fixed')
-             }
+<html lang="no">
 
-          });
+  <head>
 
-    </script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-</head>
-<body>
+    <title>Weekly task, W4T2</title>
 
-<header>
-    <h1> W4 </h1>
-    <h2> Group Task 1 - For Tuesday </h2>
-</header>
-<div class="br2"></div>
-<hr>
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-<article>
-    <h3> Working with Maven </h2>
-    <pre> 
-As a group, build a simple Maven project using the command line and text editors only.
-Then deploy the application to Heroku.
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
-The application should host an image of each group member accompanied by their name.
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
-<a href="https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin">devcenter.heroku.com</a>
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
 
-Submit only a working link to the live website.
+  </head>
 
-The purpose of this tasks is for the groups to work together solving a problem that we have not covered in class.
-    </pre>
+  <body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">GROUP TASK</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#task">Task</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#upload">Upload</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white d-flex">
+      <div class="container my-auto">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h1 class="text-uppercase">
+              <strong>Day 3 - Group Task - Due Friday</strong>
+            </h1>
+            <hr>
+          </div>
+          <div class="col-lg-8 mx-auto">
+            <p class="text-faded mb-5">Build another Spring/Maven/Java app that is hosted on Heroku.</p>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#task">Read the task</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="task">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading text-white">Day 3 - Group Task - Due Friday</h2>
+            <hr class="light my-4">
+            <pre class="text-faded mb-4">Build another Spring/Maven/Java app that is hosted on Heroku.
+
+You application must have only two pages:
+
+An Upload page
+A Display page
+The upload page lets me upload any file I choose, 
+it must then load the "display page" which changes 
+depending on the type of file I have uploaded. 
+It must show the file name as a heading.
+It must account for the following files:
+A plain text file (.txt) -> displayed directly
+A source code file (.java/.py/.cs) -> displayed in <code>
+A pdf file -> embedded 
+An image (png/jpeg) -> displayed with meta data
+Any other filetype -> Display only the meta data 
+OPTIONAL -> Handle any other filetypes that you choose
+The files need not be saved/stored long term in anyway. 
+(You may optionally add file storage using AWS/etc.)</pre>
+            <a class="btn btn-light btn-xl js-scroll-trigger" href="#Upload">Check out the result!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section id ="upload" class="bg-dark text-white">
+      <div class="container text-center">
+        <h2 class="mb-4">INSERT UPLOAD CODE HERE.</h2>
+        <a class="btn btn-light btn-xl sr-button" href="http://startbootstrap.com/template-overviews/creative/">Upload files</a>
+      </div>
+    </section>
 
 
-</article>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-<hr>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-<div class="br2"></div>
-<div class="rows" name="rows">
-    <div class="row">
-        <div class="column"><img src="Arne.jpg" alt="Arne Wiklund"></div>
-        <div class="column"><img src="Amund.jpg" alt="Amund Froknestad"></div>
-        <div class="column"><img src="Tage.jpg" alt="Tage Lessum"></div>
-        <div class="column"><img src="Bianca.jpg" alt="Bianca Eilertsen"></div>
-    </div>
-    <div class="rad">
-        <div class="columnrad"> Arne Wiklund </div>
-        <div class="columnrad"> Amund Froknestad</div>
-        <div class="columnrad"> Tage Lessum</div>
-        <div class="columnrad"> Bianca Eilertsen</div>
-    </div>
-</div>
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
 
-<div class="br"></div>
-</body>
-
+  </body>
 
 </html>
