@@ -107,7 +107,7 @@ The files need not be saved/stored long term in anyway.
         <br>
         <div class="file-upload">
           <div class="image-upload-wrap">
-            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+            <input id="fileUpload" class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
               <h3>Drag and drop a file or select add file</h3>
             </div>
@@ -123,7 +123,7 @@ The files need not be saved/stored long term in anyway.
         </div>
         <br>
         <br>
-        <a id="uploadBtn" class="btn btn-light btn-xl js-scroll-trigger" href="second.html#present">Upload files</a>
+        <a id="uploadBtn" class="btn btn-light btn-xl js-scroll-trigger"  onclick="readFile()">Upload files</a>
 
       </div>
     </section>
@@ -132,6 +132,7 @@ The files need not be saved/stored long term in anyway.
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="javascript.js"></script>
 
     <!-- Plugin JavaScript -->
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
