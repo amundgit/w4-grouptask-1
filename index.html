@@ -23,6 +23,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
 
   </head>
 
@@ -101,13 +102,23 @@ The files need not be saved/stored long term in anyway.
     <section id ="upload" class="bg-dark text-white">
       <div class="container text-center">
         <h2 class="mb-4">INSERT UPLOAD CODE HERE.</h2>
-        <form action="/action_page.php">
-          <input type="file">
-            </br>
-          </br>
-          <a  id="submit" class="btn btn-light btn-xl sr-button" href="second.html#present">Upload files</a>
-        </form>
-        
+
+      <div class="file-upload">
+  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add File</button>
+
+  <div class="image-upload-wrap">
+    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+    <div class="drag-text">
+      <h3>Drag and drop a file or select add Image</h3>
+    </div>
+  </div>
+  <div class="file-upload-content">
+    <img class="file-upload-image" src="#" alt="your image" />
+    <div class="btn btn-light btn-xl sr-button" class="image-title-wrap">
+      <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded File</span></button>
+    </div>
+  </div>
+</div>
       </div>
     </section>
 
@@ -123,6 +134,7 @@ The files need not be saved/stored long term in anyway.
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+    <script src="js/upload.js"></script>
 
   </body>
 
