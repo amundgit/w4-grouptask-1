@@ -4,7 +4,7 @@
 
 		fr.onload = function(){
 
-			document.getElementById("txtFileContent").textContent =  this.result;
+			document.getElementById("FileContent").textContent =  this.result;
 		}
 
 		fr.readAsText(this.files[0]);
