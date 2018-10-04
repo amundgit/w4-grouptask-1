@@ -14,12 +14,6 @@
         var checkSize = checkSize();
         var newsize;
 
-      /*  var myWindow = window.open("/second.html","_self");
-        myWindow.document.open();
-        var name = "balle";
-        var fileSize = 123;
-        var modified = "12-01-2015"*/
-
 
         if(extension === 'txt'){
             fr.onload = function(){
@@ -54,33 +48,32 @@
 
            
 		}
-        //myWindow.document.close();
 
-function getFileExtension(filename) {
-   return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
-          }
+    function getFileExtension(filename) {
+       return filename.slice((filename.lastIndexOf(".") - 1 >>> 0) + 2);
+              }
 
-function checkSize(){
+    function checkSize(){
 
-            if (iSize / 1024 > 1) { 
-                    if (((iSize / 1024) / 1024) > 1) 
-                    { 
-                        iSize = (Math.round(((iSize / 1024) / 1024) * 100) / 100);
-                       newsize =  iSize + "Gb"; 
-                    }
-                    else
-                    { 
-                        iSize = (Math.round((iSize / 1024) * 100) / 100)
-                       newsize =  iSize + "Mb"; 
-                    } 
-                 } 
-                 else 
-                 {
-                    iSize = (Math.round(iSize * 100) / 100)
-                       newsize =  iSize + "Kb"; 
-                 }
-        }
+                if (iSize / 1024 > 1) { 
+                        if (((iSize / 1024) / 1024) > 1) 
+                        { 
+                            iSize = (Math.round(((iSize / 1024) / 1024) * 100) / 100);
+                           newsize =  iSize + "Gb"; 
+                        }
+                        else
+                        { 
+                            iSize = (Math.round((iSize / 1024) * 100) / 100)
+                           newsize =  iSize + "Mb"; 
+                        } 
+                     } 
+                     else 
+                     {
+                        iSize = (Math.round(iSize * 100) / 100)
+                           newsize =  iSize + "Kb"; 
+                     }
+            }
 
-    fr.readAsText(this.files[0]);
+        fr.readAsText(this.files[0]);
 
-    });
+});
