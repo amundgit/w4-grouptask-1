@@ -63,6 +63,16 @@ section {
   margin-top: 0;
 }
 
+.outputs{
+  padding: 0.5rem 0;
+}
+
+code {
+  display: block;
+  white-space: pre-wrap;
+  text-align: left;
+  color: white;   
+}
 ::-moz-selection {
   color: #fff;
   background: #212529;
