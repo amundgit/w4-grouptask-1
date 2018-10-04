@@ -25,17 +25,12 @@
 
         else if(extension === 'pdf'){
             clear();
-            document.getElementById("FileContent").innerHTML = "<embed src=\""+ this.files[0]+"\" ></embed>"   // PDFS
-        }
-
-        else if(extension === 'xml'){
-            clear();
-            document.getElementById("FileContent").innerHTML = "<xml src=\""+ this.files[0]+"\" ></xml>"       // XMLS
+            document.getElementById("FileContent").innerHTML = "<embed src=\"testfiles/testfile.pdf\" width=\"100%\" height =\"1200px\" type=\"application/pdf\" ></embed>"   // PDFS
         }
 
         else if((extension === 'jpg')||(extension === 'jpeg')||(extension === 'png')||(extension === 'gif')){  //IMAGES
             clear();
-            document.getElementById("FileContent").innerHTML = "<iframe src=\""+ this.files[0]+"\"></iframe>"
+            document.getElementById("FileContent").innerHTML = "<img style=\"width:800px; height:100%;\"src=\"testfiles/testfile.jpg\"></img>"
             document.getElementById("MetadataFileContent").innerHTML ="<h2> Filename: </h2> <p>" + fileName + "</p>";
             document.getElementById("MetadataFileContent2").innerHTML = "<h2>Filesize </h2><p>" + newsize + "</p>";
             document.getElementById("MetadataFileContent3").innerHTML = "<h2> Last modified: </h2><p>" + mod + "</p>";
@@ -43,9 +38,11 @@
 
         else if((extension === 'java')||(extension === 'py')||(extension === 'cs')||(extension === 'js')){     //CODES
             clear();
-            document.getElementById("FileContent").innerHTML = "<code src=\""+ this.files[0]+"\"></code>"
-		}
-
+            fr.onload = function(e){
+            document.getElementById("codeInsert").textContent = this.result                               // TXTS
+             }
+         }
+            
         else{                                                                                                  // OTHER
             clear();
             document.getElementById("MetadataFileContent").innerHTML ="<h2> Filename: </h2> <p>" + fileName + "</p>";
