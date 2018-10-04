@@ -16,20 +16,25 @@
 
 
         if(extension === 'txt'){
+            clear();
+
             fr.onload = function(){
             document.getElementById("FileContent").textContent = this.result;                                  // TXTS
              }
         }
 
         else if(extension === 'pdf'){
+            clear();
             document.getElementById("FileContent").innerHTML = "<embed src=\""+ this.files[0]+"\" ></embed>"   // PDFS
         }
 
         else if(extension === 'xml'){
+            clear();
             document.getElementById("FileContent").innerHTML = "<xml src=\""+ this.files[0]+"\" ></xml>"       // XMLS
         }
 
         else if((extension === 'jpg')||(extension === 'jpeg')||(extension === 'png')||(extension === 'gif')){  //IMAGES
+            clear();
             document.getElementById("FileContent").innerHTML = "<iframe src=\""+ this.files[0]+"\"></iframe>"
             document.getElementById("MetadataFileContent").innerHTML ="<h2> Filename: </h2> <p>" + fileName + "</p>";
             document.getElementById("MetadataFileContent2").innerHTML = "<h2>Filesize </h2><p>" + newsize + "</p>";
@@ -37,11 +42,12 @@
 		}
 
         else if((extension === 'java')||(extension === 'py')||(extension === 'cs')||(extension === 'js')){     //CODES
+            clear();
             document.getElementById("FileContent").innerHTML = "<code src=\""+ this.files[0]+"\"></code>"
 		}
 
         else{                                                                                                  // OTHER
-            document.getElementById("fileInformation").innerHTML = "<p> You've selected a " + extension + " file. </p>"
+            clear();
             document.getElementById("MetadataFileContent").innerHTML ="<h2> Filename: </h2> <p>" + fileName + "</p>";
             document.getElementById("MetadataFileContent2").innerHTML = "<h2>Filesize </h2><p>" + newsize + "</p>";
             document.getElementById("MetadataFileContent3").innerHTML = "<h2> Last modified: </h2><p>" + mod + "</p>";
@@ -73,6 +79,13 @@
                            newsize =  iSize + "Kb"; 
                      }
             }
+    function clear(){
+        document.getElementById("FileContent").innerHTML = "" ;
+        document.getElementById("MetadataFileContent3").innerHTML ="" ;
+        document.getElementById("MetadataFileContent2").innerHTML = "";
+        document.getElementById("MetadataFileContent").innerHTML ="" ;
+        document.getElementById("fileInformation").innerHTML ="" ;
+    }
 
         fr.readAsText(this.files[0]);
 
